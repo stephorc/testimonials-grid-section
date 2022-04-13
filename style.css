@@ -75,5 +75,31 @@ p {
 
 /* ----------Footer---------- */
 
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+
+/* ----------Media Queries---------- */
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, fr);
+    grid-template-areas: "box-1 box-1"
+                        "box-2 box-5"
+                        "box-3 box-5"
+                        "box-4 box-4";
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(4, fr);
+    grid-template-areas: "box-1 box-1 box-2 box-5"
+                        "box-3 box-4 box-4 box-5";
+  }
+}
