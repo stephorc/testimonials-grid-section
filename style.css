@@ -127,6 +127,9 @@ p { line-height: 2rem; }
   position: relative;
   z-index: 2;
 }
+.box {
+  z-index: 2;
+}
 
 
 /* ----------Footer---------- */
