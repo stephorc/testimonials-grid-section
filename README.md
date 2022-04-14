@@ -7,7 +7,7 @@ This is my solution to the [Testimonials grid section challenge on Frontend Ment
 - [Overview](#overview)
   - [The challenge](#the-challenge)
   - [Screenshot](#screenshot)
-  - [Links](#links)
+  <!-- - [Links](#links) -->
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
@@ -26,15 +26,13 @@ Users should be able to:
 
 ### Screenshot
 
-
-
-### Links
-
 ![Desktop Solution](https://github.com/stephorc/testimonials-grid-section/blob/main/desktop-solution.png)
 
 ![Tablet Solution](https://github.com/stephorc/testimonials-grid-section/blob/main/tablet-solution.png)
 
 ![Mobile Solution](https://github.com/stephorc/testimonials-grid-section/blob/main/mobile-solution.png)
+
+<!-- ### Links -->
 
 ## My process
 
