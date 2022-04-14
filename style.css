@@ -9,50 +9,51 @@ html { font-size: 62.5%; }
 body {
   margin: 0;
   padding: 0;
-  width: 100%;
-  min-height: 100vh;
-  font-family: 'Poppins', sans-serif;
-  background: linear-gradient(top rgb(0, 183, 255), bottom rgb(255, 255, 255));
-  background-size: cover;
+  font-size: 1.3rem;
+  font-family: 'Barlow Semi Condensed', sans-serif;
 }
 
 h1,
 p {
   margin: 0;
   padding: 0;
-  /* color: #fff; */
 }
 
-/* ----------Main Page Layout---------- */
+h1,
+h2 {
+  font-weight: 600;
+  line-height: 2.5rem;
+}
+p { line-height: 2rem; }
+
+
+/* ----------Main Page Layout & Colors---------- */
 
 .grid {
   display: grid;
+  grid-auto-rows: 1fr;
   grid-template-columns: repeat(1, fr);
   grid-template-areas: "box-1"
                       "box-2"
                       "box-3"
                       "box-4"
                       "box-5";
-  gap: 2rem;
+  gap: 3rem;
   margin: 2em;
 }
 .box {
+  box-shadow: 2rem 4rem 3rem rgba(0, 0, 0, .2);
   border-radius: 1em;
   padding: 3em;
+  transition: transform .2s ease-in-out;
 }
-.heading {
-  display: flex;
-  gap: 1em;
+.box:hover {
+  transform: translateY(-3%);
 }
-.heading img {
-  border-radius: 50%;
-}
-/* .heading-title {
-  -
-} */
 
 .box-1 {
   background-color: hsl(263, 55%, 52%);
+  position: relative;
   grid-area: box-1;
 }
 .box-2 {
@@ -72,15 +73,78 @@ p {
   grid-area: box-5;
 }
 
+.box-1,
+.box-2,
+.box-4 {
+  color: hsl(210, 46%, 95%);
+}
+
+.box-3 p:last-child,
+.box-5 p:last-child {
+  color: hsl(217, 19%, 35%);
+}
+
+.box p:last-child {
+  font-weight: 500;
+  opacity: .7;
+}
+
+
+/* ----------Box Heading Divs/Images---------- */
+
+.heading {
+  display: flex;
+  gap: 1em;
+}
+.heading img {
+  width: 3.7em;
+  border-radius: 50%;
+  border: .3rem solid hsl(0, 0%, 81%);
+}
+.box-1 .heading img {
+  border: .3rem solid hsl(263, 85%, 62%);
+}
+.box-4 img {
+  border: .3rem solid hsl(263, 55%, 52%);
+}
+.head-title p {
+  opacity: .5;
+}
+
+.quote {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 2em;
+}
+.quote img {
+  height: 10.3em;
+}
+.box-1 .heading,
+.box-1 h2 {
+  position: relative;
+  z-index: 2;
+}
+
 
 /* ----------Footer---------- */
 
 .attribution {
-  font-size: 11px;
+  font-size: 1.1rem;
   text-align: center;
+  margin: 2em auto;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+  text-decoration: none;
+  font-weight: 600;
+}
+.attribution a:hover {
+  color: hsl(228, 57%, 56%);
+  text-decoration: underline;
 }
 
 
@@ -88,7 +152,6 @@ p {
 
 @media (min-width: 768px) {
   .grid {
-    grid-template-columns: repeat(2, fr);
     grid-template-areas: "box-1 box-1"
                         "box-2 box-5"
                         "box-3 box-5"
@@ -98,8 +161,9 @@ p {
 
 @media (min-width: 1024px) {
   .grid {
-    grid-template-columns: repeat(4, fr);
     grid-template-areas: "box-1 box-1 box-2 box-5"
                         "box-3 box-4 box-4 box-5";
+    margin: 3em auto;
+    padding: 0 2em 0;
   }
 }
